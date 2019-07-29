@@ -1,4 +1,7 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
+import {UsuarioEntity} from "../usuario/usuario.entity";
+import {AlquilerEntity} from "./alquiler.entity";
+import {ProductoEntity} from "../producto/producto.entity";
 
 @Entity('db_Detalle_Alquiler')
 export class DetalleAlquilerEntity {
@@ -42,5 +45,15 @@ export class DetalleAlquilerEntity {
     })
     fechaFinAlquiler:Date;
 
+    @ManyToOne(
+        type => AlquilerEntity,
+        alquiler => alquiler.detalle
+    )
+    alquiler:number;
 
+    @ManyToOne(
+        type => ProductoEntity,
+        producto => producto.detalleAlquiler
+    )
+    producto:number;
 }

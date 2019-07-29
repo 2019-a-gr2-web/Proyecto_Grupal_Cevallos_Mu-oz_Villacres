@@ -1,4 +1,6 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {UsuarioRolEntity} from "./usuario-rol.entity";
+import {RolPermisoEntity} from "./rol-permiso.entity";
 
 @Entity('db_Rol')
 export class RolEntity {
@@ -12,5 +14,19 @@ export class RolEntity {
         name:'nombre'
     })
     rolNombre:string;
+
+    @OneToMany(
+        type => UsuarioRolEntity,
+        rol => rol
+    )
+    rol: UsuarioRolEntity[];
+
+    @OneToMany(
+        type => RolPermisoEntity,
+        rol => rol
+    )
+    rolper: RolPermisoEntity[]
+
+
 
 }

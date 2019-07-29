@@ -1,4 +1,7 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {ProductoPrecioEntity} from "./producto-precio.entity";
+import {DetalleAlquilerEntity} from "../alquiler/detalle-alquiler.entity";
+import {CategoriaProductoEntity} from "./categoria-producto.entity";
 
 @Entity('db_Producto')
 export class ProductoEntity {
@@ -48,4 +51,21 @@ export class ProductoEntity {
     })
     modelo:string;
 
+    @OneToMany(
+        type => ProductoPrecioEntity,
+        productoPrecio => productoPrecio
+    )
+    productoPrecio:ProductoPrecioEntity[];
+
+    @OneToMany(
+        type => DetalleAlquilerEntity,
+        detalleAlquiler => detalleAlquiler
+    )
+    detalleAlquiler:DetalleAlquilerEntity[];
+
+    @ManyToOne(
+        type => CategoriaProductoEntity,
+        categoria => categoria.producto
+    )
+    categoria:number;
 }

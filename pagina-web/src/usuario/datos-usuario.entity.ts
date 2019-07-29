@@ -1,4 +1,5 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn} from "typeorm";
+import {UsuarioEntity} from "./usuario.entity";
 
 @Entity('db_Dato_Usuario')
 export class DatosUsuarioEntity {
@@ -25,5 +26,11 @@ export class DatosUsuarioEntity {
         length:100,
         name:'direccion'
     })
-    direccionUsuario:string
+    direccionUsuario:string;
+
+    @OneToOne(
+        type => UsuarioEntity
+    )
+    @JoinColumn()
+    usuario:UsuarioEntity;
 }

@@ -1,4 +1,5 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {RolPermisoEntity} from "./rol-permiso.entity";
 
 @Entity('db_Permiso')
 export class PermisoEntity {
@@ -12,4 +13,10 @@ export class PermisoEntity {
         name:'nombre'
     })
     nombrePermiso:string;
+
+    @OneToMany(
+        type => RolPermisoEntity,
+        rol => rol
+    )
+    permiso: RolPermisoEntity[]
 }

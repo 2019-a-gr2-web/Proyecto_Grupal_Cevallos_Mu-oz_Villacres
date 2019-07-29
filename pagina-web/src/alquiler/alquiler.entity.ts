@@ -1,4 +1,6 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {UsuarioEntity} from "../usuario/usuario.entity";
+import {DetalleAlquilerEntity} from "./detalle-alquiler.entity";
 
 @Entity('db_Alquiler')
 export class AlquilerEntity {
@@ -13,5 +15,17 @@ export class AlquilerEntity {
         name:'total_alquiler'
     })
     totalAlquiler:number;
+
+    @ManyToOne(
+        type => UsuarioEntity,
+        usuario => usuario.alquiler
+    )
+    usuario:number;
+
+    @OneToMany(
+        type => DetalleAlquilerEntity,
+        alquiler => alquiler
+    )
+    detalle: DetalleAlquilerEntity[]
 
 }

@@ -1,4 +1,6 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {UsuarioRolEntity} from "./usuario-rol.entity";
+import {AlquilerEntity} from "../alquiler/alquiler.entity";
 
 @Entity('db_Usuario')
 export class UsuarioEntity {
@@ -30,5 +32,17 @@ export class UsuarioEntity {
         name:'estado'
     })
     estadoUsuario:boolean;
+
+    @OneToMany(
+        type => UsuarioRolEntity,
+        rol => rol
+    )
+    rol: UsuarioRolEntity[]
+
+    @OneToMany(
+        type => AlquilerEntity,
+        alquiler => alquiler
+    )
+    alquiler: AlquilerEntity[]
 
 }
