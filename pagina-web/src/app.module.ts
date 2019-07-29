@@ -21,7 +21,7 @@ import {DetalleAlquilerEntity} from "./alquiler/detalle-alquiler.entity";
             name: 'default', // Nombre de cadena de conexión
             type: 'mysql',
             host: 'localhost',
-            port: 32777,
+            port: 32769,
             username: 'root',
             password: 'root',
             database: 'proyectoweb',

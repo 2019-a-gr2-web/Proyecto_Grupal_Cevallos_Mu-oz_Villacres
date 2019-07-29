@@ -11,7 +11,7 @@ export class RolEntity {
     @Column({
         type:'varchar',
         length:100,
-        name:'nombre'
+        name:'nombre_rol'
     })
     rolNombre:string;
 
@@ -25,8 +25,6 @@ export class RolEntity {
         type => RolPermisoEntity,
         rol => rol
     )
-    rolper: RolPermisoEntity[]
-
-
+    rolpermiso: RolPermisoEntity[]
 
 }
