@@ -3,7 +3,7 @@ import {UsuarioEntity} from "./usuario.entity";
 import {PermisoEntity} from "./permiso.entity";
 import {RolEntity} from "./rol.entity";
 
-Entity('db_Rol_Rol_Permiso')
+@Entity('db_Rol_Permiso')
 export class RolPermisoEntity {
 
     @PrimaryGeneratedColumn()
@@ -11,13 +11,13 @@ export class RolPermisoEntity {
 
     @ManyToOne(
         type => PermisoEntity,
-        permiso => permiso.permiso
+        permiso => permiso.permisito
     )
-    permiso:number;
+    permiso:number
 
     @ManyToOne(
         type => RolEntity,
-        rol => rol.rolper
+        rol => rol.rolpermiso
     )
     rol:number;
 }

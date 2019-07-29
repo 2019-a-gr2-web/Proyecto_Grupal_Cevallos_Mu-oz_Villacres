@@ -10,13 +10,13 @@ export class PermisoEntity {
     @Column({
         type:'varchar',
         length:100,
-        name:'nombre'
+        name:'nombre_permiso'
     })
     nombrePermiso:string;
 
     @OneToMany(
         type => RolPermisoEntity,
-        rol => rol
+        rolpermiso => rolpermiso.permiso
     )
-    permiso: RolPermisoEntity[]
+    permisito: RolPermisoEntity[]
 }
