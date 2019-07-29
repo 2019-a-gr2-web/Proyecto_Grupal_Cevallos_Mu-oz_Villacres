@@ -11,14 +11,14 @@ export class ProductoEntity {
         length:100,
         name:'descripcion_corta'
     })
-    descripcion_corta:string;
+    descripcionCorta:string;
 
     @Column({
         type:'varchar',
         length:500,
         name:'descripcion_larga'
     })
-    descripcion_larga:string;
+    descripcionLarga:string;
 
     @Column({
         type:'varchar',

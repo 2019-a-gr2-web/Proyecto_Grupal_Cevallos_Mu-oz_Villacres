@@ -1,7 +1,7 @@
 import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
 
-@Entity('db_Producto_Precio')
-export class ProductoPrecioEntity {
+@Entity('db_Alquiler')
+export class AlquilerEntity {
 
     @PrimaryGeneratedColumn()
     id:number;
@@ -10,7 +10,8 @@ export class ProductoPrecioEntity {
         type:'decimal',
         precision: 10,
         scale:2,
-        name:'precio_producto'
+        name:'total_alquiler'
     })
-    precioProducto:number;
+    totalAlquiler:number;
+
 }

@@ -11,7 +11,7 @@ export class CategoriaProductoEntity {
         length: 100,
         name: 'nombre_categoria',
     })
-    nombre_categoria:string;
+    nombreCategoria:string;
 
 
 }

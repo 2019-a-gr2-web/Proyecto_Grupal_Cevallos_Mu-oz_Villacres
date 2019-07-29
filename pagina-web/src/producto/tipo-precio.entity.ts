@@ -9,7 +9,7 @@ export class TipoPrecioEntity {
     @Column({
         type: 'varchar',
         length: 20,
-        name: 'nombre_categoria',
+        name: 'tipo_precio_nombre',
     })
-    tipo_precio_nombre
+    tipoPrecioNombre:string;
 }

@@ -1,8 +1,9 @@
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {Module} from "@nestjs/common";
 import {CategoriaProductoEntity} from "./categoria-producto.entity";
-import {ProductoEntity} from "./producto-entity";
+import {ProductoEntity} from "./producto.entity";
 import {ProductoPrecioEntity} from "./producto-precio.entity";
+import {TipoPrecioEntity} from "./tipo-precio.entity";
 
 @Module({
     imports:[
@@ -10,7 +11,8 @@ import {ProductoPrecioEntity} from "./producto-precio.entity";
             [
                 CategoriaProductoEntity,
                 ProductoEntity,
-                ProductoPrecioEntity
+                ProductoPrecioEntity,
+                TipoPrecioEntity
             ],
             'default'
         )
