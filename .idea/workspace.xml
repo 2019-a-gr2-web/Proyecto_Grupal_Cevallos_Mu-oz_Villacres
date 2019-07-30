@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90b1addc-a6e2-4250-bb91-20758fe2baea" name="Default Changelist" comment="" />
+    <list default="true" id="90b1addc-a6e2-4250-bb91-20758fe2baea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Proyecto_Grupal_Cevallos_Munoz_Villacres.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina-web/views/Administrador/permisos.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina-web/views/Componentes/header.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina-web/views/Componentes/header_usuario.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina-web/views/Login/registro.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina-web/views/Publicaciones/publicaciones.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina-web/views/Usuario/cuenta.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina-web/views/Usuario/menu.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina-web/views/Usuario/reserva.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagina-web/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/pagina-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/pagina-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina-web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pagina-web/src/main.ts" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/pagina-web/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,16 +33,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pagina-web/src/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="54" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="54" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pagina-web/views/login.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-670">
+              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pagina-web/views/Usuario/menu.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pagina-web/views/Usuario/reserva.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pagina-web/views/Usuario/cuenta.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pagina-web/views/Administrador/permisos.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pagina-web/views/Login/registro.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pagina-web/views/Publicaciones/publicaciones.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/header.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/header_usuario.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -44,7 +109,6 @@
         <option value="$PROJECT_DIR$/pagina-web/src/categoria-producto/producto-precio.entity.ts" />
         <option value="$PROJECT_DIR$/pagina-web/src/categoria-producto/producto-entity.ts" />
         <option value="$PROJECT_DIR$/pagina-web/src/categoria-producto/categoria-producto.module.ts" />
-        <option value="$PROJECT_DIR$/pagina-web/src/main.ts" />
         <option value="$PROJECT_DIR$/pagina-web/views/Componentes/footer.ejs" />
         <option value="$PROJECT_DIR$/pagina-web/views/Login/inicio.ejs" />
         <option value="$PROJECT_DIR$/pagina-web/views/Login/registro.ejs" />
@@ -55,10 +119,12 @@
         <option value="$PROJECT_DIR$/pagina-web/views/Comprador/autos.ejs" />
         <option value="$PROJECT_DIR$/pagina-web/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/pagina-web/views/Comprador/reserva.ejs" />
+        <option value="$PROJECT_DIR$/pagina-web/src/main.ts" />
+        <option value="$PROJECT_DIR$/pagina-web/views/login.ejs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="745" />
@@ -71,6 +137,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -83,11 +150,22 @@
               <item name="Proyecto_Grupal_Cevallos_Munoz_Villacres" type="462c0819:PsiDirectoryNode" />
               <item name="pagina-web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Proyecto_Grupal_Cevallos_Munoz_Villacres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto_Grupal_Cevallos_Munoz_Villacres" type="462c0819:PsiDirectoryNode" />
+              <item name="pagina-web" type="462c0819:PsiDirectoryNode" />
+              <item name="publico" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto_Grupal_Cevallos_Munoz_Villacres" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto_Grupal_Cevallos_Munoz_Villacres" type="462c0819:PsiDirectoryNode" />
+              <item name="pagina-web" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -136,16 +214,18 @@
       <workItem from="1564426300432" duration="674000" />
       <workItem from="1564439545375" duration="3162000" />
       <workItem from="1564454050976" duration="13422000" />
+      <workItem from="1564527442932" duration="1724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30778000" />
+    <option name="totallyTimeSpent" value="32896000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="676" y="0" width="697" height="745" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41666666" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.8497724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -154,12 +234,12 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49925596" weight="0.9516908" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32206118" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32850242" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.81031865" visible="true" weight="0.3267974" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.18968134" side_tool="true" visible="true" weight="0.3267974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -188,89 +268,35 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pagina-web/src/tipo-precio/tipo-precio.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/src/tipo-precio/tipo-precio.module.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina-web/src/tipo-precio/tipo-precio.entity.ts" />
+    <entry file="file://$PROJECT_DIR$/pagina-web/src/tipo-precio/tipo-precio.module.ts" />
     <entry file="file://$PROJECT_DIR$/pagina-web/src/categoria-producto/producto-precio.entity.ts" />
     <entry file="file://$PROJECT_DIR$/pagina-web/src/categoria-producto/categoria-producto.entity.ts" />
     <entry file="file://$PROJECT_DIR$/pagina-web/src/categoria-producto/producto-entity.ts" />
     <entry file="file://$PROJECT_DIR$/pagina-web/src/categoria-producto/producto-module.ts" />
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/footer.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Login/inicio.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="42" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/modal.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/header-usuarios.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Usuario/menu.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="59" column="40" lean-forward="true" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Usuario/autos.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="58" column="21" selection-end-line="114" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Administrador/permisos.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="49" column="32" selection-start-line="25" selection-start-column="24" selection-end-line="49" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Usuario/reserva.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Publicacion/publicaciones.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/footer.ejs" />
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Login/inicio.ejs" />
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/modal.ejs" />
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/header-usuarios.ejs" />
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Usuario/autos.ejs" />
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Publicacion/publicaciones.ejs" />
     <entry file="file://$PROJECT_DIR$/pagina-web/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -278,23 +304,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/views/Login/registro.ejs">
+    <entry file="file://$PROJECT_DIR$/pagina-web/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="57" column="30" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="68">
+          <caret line="4" column="54" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="54" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Administrador/crear-editar.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Usuario/menu.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Usuario/reserva.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pagina-web/views/Usuario/cuenta.ejs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pagina-web/src/main.ts">
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Administrador/permisos.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Login/registro.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Publicaciones/publicaciones.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/header.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/Componentes/header_usuario.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina-web/views/login.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-670">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
