@@ -13,6 +13,13 @@ export class CategoriaProductoEntity {
         name: 'nombre_categoria',
     })
     nombreCategoria:string;
+    
+    @Column({
+        type:'varchar',
+        length:100,
+        name:'imagen_categoria'
+    })
+    imagenCategoria:string;
 
     @OneToMany(
         type => ProductoEntity,
