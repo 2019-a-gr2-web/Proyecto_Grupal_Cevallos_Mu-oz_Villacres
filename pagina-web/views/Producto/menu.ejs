@@ -1,0 +1,92 @@
+
+<!doctype html>
+<html lang="es">
+<%- include('../Componentes/header_usuario')%>
+<style>
+    .cuadro{
+        border: 1px solid black;
+        height: 150px;
+        list-style-type: none;
+        text-align: center;
+        margin: 10px;
+        background: rgba(5, 115, 133, 0.55);
+        color: white;
+    }
+</style>
+
+<body>
+
+<div class="container">
+    <div class="row text-center">
+        <h1>¿que tipo de automovil buscas?</h1>
+    </div>
+    <div class="text-center">
+        <div class="col-sm-12">
+            <form action="" method="post">
+                <input type="text" class="input-sm col-sm-8">
+                <button type="submit" class="btn btn-primary col-sm-2"><span class="glyphicon glyphicon-search"></span> </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-sm-12 text-center">
+        <ul>
+            <%listaCategorias.forEach((categoria)=>{%>
+            <li type="submit" class="col-md-3 col-sm-4 col-xs-6 cuadro">
+                <a href="/api/vehiculos">
+                    <img src="<%=categoria.imagenCategoria%>" width="100px" height="100px">
+                    <h4><%=categoria.nombreCategoria%></h4>
+                </a>
+            </li>
+            <%})%>
+
+        </ul>
+    </div>
+</div>
+<div id="modalComentario" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Detalle </h4>
+            </div>
+            <div class="modal-body">
+                <form action="/api/autos" method="get">
+                    <label for="emisor">Para: </label>
+                    <input type="text" class="form-control" id="emisorId" name="emisor">
+                    <textarea for="mensaje" disabled></textarea>
+                    <textarea type="text" class="form-control" id="totalDetalleId" name="mensaje"></textarea>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-xs-6">
+                    <form action="">
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+                    </form>
+                </div>
+                <div class="col-xs-6">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script>
+
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+<!doctype html>
+<html lang="es">
+<%- include('../Componentes/header_usuario')%>
+<style>
+    .cuadro{
+        border: 1px solid black;
+        height: 150px;
+        list-style-type: none;
+        text-align: center;
+        margin: 10px;
+        background: darkcyan;
+        color: white;
+    }
+</style>
+<body>
+
+<div class="container">
+    <div class="row text-center">
+        <h1>Reserva</h1>
+    </div>
+
+</div>
+
+<div class="container">
+    <br>
+    <br>
+    <form action="">
+        <div class="col-sm-12">
+            <div class="col-sm-6">
+                <h4>Datos Propietarios</h4>
+                <!--Datos propietario-->
+                <ul>
+                    <li>Contacto:</li>
+                    <li>Telefono:</li>
+                    <li>Nombre: </li>
+                    <li>Ubicacion</li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group row">
+                    <label class="control-label col-sm-4" for="fechaInicioId">Fecha Inicio: </label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" id="fechaInicioId" name="fechaInicio">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-sm-4" for="fechaFinId">Fecha Entrega: </label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" id="fechaFinId" name="fechaFin">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-sm-4" for="precioId">Precio: </label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" id="precioId" name="precio">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-12 text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+</div>
+
+
+<div id="modalDetalle" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Información Vehículo </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4>Nombre vehículo</h4>
+
+                <form action="">
+                    <div class="col-md-12">
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-xs-6">
+                    <form action="">
+                        <label for="autoId" hidden>Id: </label>
+                        <input type="number" id="autoId" name="autoId" hidden>
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Reservar</button>
+                    </form>
+                </div>
+                <div class="col-xs-6">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script>
+    const fechaInicio=document.getElementById("fechaInicioId");
+    const fechaFin=document.getElementById("fechaFinId");
+    const hoy=new Date()
+    let mes=hoy.getMonth()+1;
+    let dia=hoy.getDate()
+    if(mes<10){
+        mes="0"+mes
+    }
+    if(dia<10){
+        dia="0"+dia
+    }
+    fechaInicio.value=hoy.getFullYear()+"-"+mes+"-"+dia;
+    fechaFin.value=hoy.getFullYear()+"-"+mes+"-"+dia;
+
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="es">
 <head>
@@ -27,22 +26,28 @@
                     Inicio de sesion
                 </div>
                 <div class="card-body">
+                    <div class="text-center">
+                    <%const existeMensaje=mensaje%>
+                    <%if(existeMensaje){%>
+                        <span class="text-warning"><%=mensaje%></span>
+                    <%}%>
+                    </div>
                     <form action="/api/ingreso" method="post">
                         <div class="form-group">
                             <label for="inputUsuario">Usuario</label>
-                            <input type="text" class="form-control" id="inputUsuario" name="usuario">
+                            <input type="email" class="form-control" id="inputUsuario" name="correoUsuario">
                         </div>
                         <div class="form-group">
                             <label for="inputPassword">Contraseña</label>
                             <input type="password" class="form-control" id="inputPassword" name="password">
                         </div>
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label for="selectRol">Rol</label>
                             <select class="form-control" name="tipoRol" id="selectRol">
                                 <option value="1">Administrador</option>
                                 <option value="2">Usuario</option>
                             </select>
-                        </div>
+                        </div>-->
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-primary">Ingresar</button>
                         </div>
