@@ -21,9 +21,9 @@ import {DetalleAlquilerEntity} from "./alquiler/detalle-alquiler.entity";
             name: 'default', // Nombre de cadena de conexión
             type: 'mysql',
             host: 'localhost',
-            port: 32769,
+            port: 3306,
             username: 'root',
-            password: 'root',
+            password: '',
             database: 'proyectoweb',
             entities: [
                 UsuarioEntity,
@@ -39,7 +39,7 @@ import {DetalleAlquilerEntity} from "./alquiler/detalle-alquiler.entity";
                 AlquilerEntity,
                 DetalleAlquilerEntity,
             ],
-            synchronize: true,
+            synchronize: false,
             dropSchema: false
         }),
     ],
