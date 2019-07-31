@@ -1,0 +1,146 @@
+
+<!doctype html>
+<html lang="es">
+<%- include('../Componentes/header_usuario')%>
+<style>
+    .cuadro{
+        border: 1px solid black;
+        height: 150px;
+        list-style-type: none;
+        text-align: center;
+        margin: 10px;
+        background: rgba(5, 115, 133, 0.55);
+        color: white;
+    }
+</style>
+
+<body>
+
+<div class="container" style="padding-top: 30px">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#cuenta"> Datos Personales </a></li>
+                <li><a data-toggle="tab" href="#publicaciones"> Publicaciones </a></li>
+                <li><a data-toggle="tab" href="#alquiler"> Alquiler</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="usuarios" class="tab-pane fade in active">
+                    <div class="col-sm-12">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4" for="nombreId">Nombre: <span class="text-warning">*</span> </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="nombreId" name="nombreUsuario" value="<%=usuario.nombre%>" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4" for="direccionId">Dirección: </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="direccionId" name="direccionUsuario" value="<%=usuario.direccion%>" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4" for="telefonoId">Teléfono: <span class="text-warning">*</span> </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="telefonoId" name="telefonoUsuario" value="<%=usuario.telefono%>" disabled>
+                            </div>
+                        </div>
+                        <hr>
+                        
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4" for="correoId">Correo: <span class="text-warning">*</span> </label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="correoId" name="correoUsuario" value="<%=usuario.correo%>" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4" for="passwordId">Contraseña: <span class="text-warning">*</span> </label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="passwordId" name="password" value="<%=usuario.password%>" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="publicaciones" class="tab-pane fade">
+                    <div class="col-sm-12">
+                        <table class="table table-sm table-hover table-bordered">
+                            <thead class="text-center">
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Categoria</th>
+                                <th>Vehículo</th>
+                                <th>Tipo Precio</th>
+                                <th>Precio</th>
+                                <th>Aprobar</th>
+                            </tr>
+                            </thead>
+
+                            <tbody id="bodyPublicaciones">
+                                <%listaPublicaciones.forEach((producto)=>{%>
+                                    <tr>
+                                        <td><%=producto.nombreUsuario%></td>
+                                        <td><%=producto.nombreCategoria%></td>
+                                        <td><%=producto.descripcionCorta%></td>
+                                        <td><%=producto.tipoPrecio%></td>
+                                        <td><%=producto.productoPrecio%></td>
+                                        <td>
+                                            <form action="" method="post">
+                                                <input type="number" name="productoId" hidden>
+                                                <button type="button" class="btn btn-xs btn-primary">Aprobar</button>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <form action="" method="post">
+                                                <input type="number" name="publicacionId" hidden>
+                                                <button type="button" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modalComentario">Comentar</button>
+                                            </form>
+                                            <form action="" method="post">
+                                                <input type="number" name="publicacionId" hidden>
+                                                <button type="button" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modalVista">Ver</button>
+                                            </form>
+            
+                                        </td>
+                                    </tr>
+                                <%})%>    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="alquiler" class="tab-pane fade">
+                    <div class="col-sm-12">
+                        <table class="table table-sm table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Fecha Inicio</th>
+                                    <th>Fecha Fin</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="bodyHistorial">
+                                <%listaAlquiler.forEach((alquiler)=>{%>
+                                    <tr>
+                                        <td><%=alquiler.usuario%></td>
+                                        <td><%=alquiler.fechaInicioAlquiler%></td>
+                                        <td><%=alquiler.fechaFinAlquiler%></td>
+                                        <td><%=alquiler.totalAlquiler%></td>
+                                    </tr>
+                                <%})%>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script>
+
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>

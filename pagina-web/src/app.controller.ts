@@ -1,9 +1,11 @@
-import { Controller, Get, Res, Query } from '@nestjs/common';
+import { Controller, Get, Res, Query, UploadedFile, Param, UseInterceptors, Post, Render } from '@nestjs/common';
 import { AppService } from './app.service';
 import { UsuarioEntity } from './usuario/usuario.entity';
 import { PermisoEntity } from './usuario/permiso.entity';
 import { ProductoEntity } from './producto/producto.entity';
 import { AlquilerEntity } from './alquiler/alquiler.entity';
+import { RolEntity } from './usuario/rol.entity';
+import { FileInterceptor } from '@nestjs/platform-express';
 
 @Controller('/api')
 export class AppController {
@@ -69,32 +71,65 @@ export class AppController {
     }];
 
     res.render('Producto/menu.ejs',{
-      listaCategorias:listaCategorias
+      listaCategorias:listaCategorias,
+      publicar:1//permiso publicar
     })
   }
   
   @Get('vehiculos')
   autos(@Res() res){
-    res.render('Publicaciones/publicaciones.ejs')
+    const listaVehiculos=[{
+      id:1,
+      descripcionCorta:"",
+      imagenProducto:""
+    }]
+    res.render('Producto/vehiculos.ejs',{
+      listaVehiculos:listaVehiculos
+    })
   }
 
   @Get('reserva')
   reserva(@Res() res){
-    res.render('Usuario/reserva.ejs')
+    
+    res.render('Usuario/reserva.ejs',{
+      propietario:UsuarioEntity
+    })
   }
 
   @Get('cuenta')
   cuenta(@Res() res){
-    res.render('Usuario/cuenta.ejs')
+    const listaPublicaciones=[{
+      nombreUsuario:"",
+      nombreCategoria:"",
+      nombreVehiculo:"",
+      descripcionCorta:"",
+      tipoPrecio:"",
+      productoPrecio:""
+    }]
+
+    const listaAlquiler=[{
+      usuario:"",
+      totalAlquiler:"",
+      fechaInicioAlquiler:"2019-06-20",
+      fechaFinAlquiler:"2019-07-10",
+      estadoAlquiler:""
+    }]
+    res.render('Usuario/cuenta.ejs',{
+      listaPublicaciones:listaPublicaciones,
+      listaAlquiler:listaAlquiler,
+      usuario:UsuarioEntity
+    })
   }
   
   @Get('publicaciones')
   publicaciones(@Res() res){
-    res.render('Publicaciones/publicaciones.ejs')
+    res.render('Publicaciones/publicaciones.ejs',{
+
+    })
   }
   
-  @Get('permisos')
-  permisos(@Res() res){
+  @Get('gestion')
+  gestion(@Res() res){
 
     const listaUsuarios=[{
       usuarioId:0,
@@ -104,15 +139,37 @@ export class AppController {
       correoUsuario:"",
       estadoUsuario:"",
     }];
-    //const listaPermisos:Array<PermisoEntity>=[];
-    //const listaPublicaciones:Array<ProductoEntity>=[];
-    //const listaAlquiler:Array<AlquilerEntity>=[];
+    const listaRoles=[{
+      nombreRol:"",
+    }]
 
-    res.render('Administrador/permisos.ejs',{
+    const listaPermisos=[{
+      nombrePermiso:"",
+    }]
+
+    const listaPublicaciones=[{
+      nombreUsuario:"",
+      nombreCategoria:"",
+      nombreVehiculo:"",
+      descripcionCorta:"",
+      tipoPrecio:"",
+      productoPrecio:""
+    }]
+
+    const listaAlquiler=[{
+      usuario:"",
+      totalAlquiler:"",
+      fechaInicioAlquiler:"2019-06-20",
+      fechaFinAlquiler:"2019-07-10",
+      estadoAlquiler:""
+    }]
+
+    res.render('Administrador/gestion.ejs',{
       listaUsuarios:listaUsuarios,
-      //listaPermisos:listaPermisos,
-      //listaPublicaciones:listaPublicaciones,
-      //listaAlquiler:listaAlquiler
+      listaPublicaciones:listaPublicaciones,
+      listaAlquiler:listaAlquiler,
+      listaRoles:listaRoles,
+      listaPermisos:listaPermisos,
     })
   }
 
@@ -120,5 +177,48 @@ export class AppController {
   vehiculos(@Res() res){
     res.render('Producto/vehiculos.ejs')
   }
+
+  @Get('permisos')
+  permisos(@Res() res){
+    res.render('Administracion/permisos.ejs')
+  }
+
+  @Get('publicar')
+  publicar(
+    @Res() res
+  ){
+    const listaCategorias=[{
+      id:0,
+      nombreCategoria:"",
+    }]
+    res.render('Publicaciones/publicar.ejs',{
+      listaCategorias:listaCategorias
+    })
+  }
+
+  @Get('du/:idTrago')
+    @Render('publicar')
+    subirArchivo(
+        //@Param('idTrago') idTrago
+    ) {
+        
+    }
+
+    @Post('subirArchivo/:idTrago')
+    @UseInterceptors(
+        FileInterceptor(
+            'imagen',
+            {
+                dest: __dirname + '/../archivos'
+            }
+        )
+    )
+    subirArchivoPost(
+        @Param('idTrago') idTrago,
+        @UploadedFile() archivo
+    ){
+        console.log(archivo);
+        return { mensaje: 'ok' };
+    }
 
 }

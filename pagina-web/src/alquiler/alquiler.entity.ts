@@ -16,6 +16,7 @@ export class AlquilerEntity {
     })
     totalAlquiler:number;
 
+
     @ManyToOne(
         type => UsuarioEntity,
         usuario => usuario.alquiler

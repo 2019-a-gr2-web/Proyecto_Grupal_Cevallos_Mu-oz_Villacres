@@ -1,0 +1,146 @@
+
+<!doctype html>
+<html lang="es">
+<%- include('../Componentes/header_usuario')%>
+<style>
+    .cuadro{
+        border: 1px solid black;
+        height: 150px;
+        list-style-type: none;
+        text-align: center;
+        margin: 10px;
+        background: rgba(5, 115, 133, 0.55);
+        color: white;
+    }
+</style>
+
+<body>
+
+<div class="container" style="padding-top: 20px">
+    
+   <form class="col-sm-12" action="" method="POST">
+       <div class="col-sm-6">
+            <div class="form-group row">
+                    <label class="control-label col-sm-4" for="categoriaId">Categoria: </label>
+                <div class="col-sm-8">
+                    <select class="form-control" id="categoriaId" name="categoria">
+                            <%listaCategorias.forEach((categoria)=>{%>
+                                <option value="<%=categoria.id%>"><%=categoria.nombreCategoria%></option>
+                            <%})%>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-4" for="desCortaId">Descripcio Corta: </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="desCortaId" name="descripcionCorta">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-4" for="descLargaId">Descripcion Larga: </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="descLargaId" name="descripcionLarga">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-4" for="precioId">Precio: </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="precioId" name="productoPrecio">
+                </div>
+            </div>
+       </div>
+       <div class="col-sm-6">
+           <div class="col-sm-6">
+                <div class="form-group row">
+                    <label class="control-label col-sm-4" for="placaId">Placa: </label>
+                    <div class="col-sm-8">
+                        <input type="text" plcaholder="AAA1234" class="form-control" id="placaId" name="placa">
+                    </div>
+                </div>
+           </div>
+           <div class="col-sm-6">
+                <div class="form-group row">
+                    <label class="control-label col-sm-4" for="colorId">Color: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="colorId" name="color">
+                    </div>
+                </div>
+           </div>
+           <div class="col-sm-6">
+                <div class="form-group row">
+                    <label class="control-label col-sm-4" for="marcaId">Marca: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="marcaId" name="marca">
+                    </div>
+                </div>
+           </div>
+           <div class="col-sm-6">
+                <div class="form-group row">
+                    <label class="control-label col-sm-4" for="modeloId">Modelo: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="modeloId" name="modelo">
+                    </div>
+                </div>
+           </div>
+           <div class="col-sm-12">
+                
+                
+                <div class="form-group row">
+                    <label class="control-label col-sm-4" id="texto-archivo" for="imagenId">Imagen: </label>
+                    <div class="col-sm-8">
+                            <input id="imagenId"
+                            type="file"
+                            name="imagenProducto"
+                            accept=".pptx, .jpg, .png"
+                            multiple
+                            onchange="validarArchivos()">
+                    </div>  
+                </div>
+                   
+           </div>
+           <div class="col-sm-12">
+                <img
+                    id="imagen-muestra"
+                    src="/api/imagenes/"
+                    width="300px"
+                    height="300px"
+                    alt="">
+           </div>
+           
+       </div>
+       <div class="col-sm-12 text-center" style="padding-top: 50px">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+       </div>
+       
+
+    </form>
+</div>
+
+<script>
+    function validarArchivos(){
+        const archivo = document.getElementById('imagenId');
+        console.log(archivo.files);
+        const label = document.getElementById('texto-archivo');
+        if(archivo.files.length > 0){
+            label.innerText = 'Archivo seleccionados ';
+            ///// EMPIEZA
+            const file = archivo.files[0];
+            const reader = new FileReader();
+            reader.onload = (eventoLecturaArchivo) => {
+                const url = eventoLecturaArchivo.target.result;
+                console.log(url);
+                const imagenMuestra = document.getElementById('imagen-muestra');
+                imagenMuestra.src = url;
+            };
+            reader.readAsDataURL(file);
+            //// TERMINA
+        }else{
+            label.innerText = 'Seleccionar archivo';
+        }
+    }
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>

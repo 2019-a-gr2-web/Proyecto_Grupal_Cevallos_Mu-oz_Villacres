@@ -1,0 +1,141 @@
+
+<!doctype html>
+<html lang="es">
+<%- include('../Componentes/header_usuario')%>
+<style>
+    .cuadro{
+        border: 1px solid black;
+        height: 150px;
+        list-style-type: none;
+        text-align: center;
+        margin: 10px;
+        background: rgba(5, 115, 133, 0.55);
+        color: white;
+    }
+</style>
+
+<body>
+
+<div class="container">
+    <div class="row text-center">
+        <h1>¿que tipo de automovil buscas?</h1>
+    </div>
+    <div class="text-center">
+        <div class="col-sm-12">
+            <form action="" method="post">
+                <input type="text" class="input-sm col-sm-8">
+                <button type="submit" class="btn btn-primary col-sm-2"><span class="glyphicon glyphicon-search"></span> </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-sm-12 text-center">
+        <ul>
+            <%listaVehiculos.forEach((vehiculo)=>{%>
+            <li class="col-md-3 col-sm-4 col-xs-6 cuadro">
+                <a type="button" data-toggle="modal" data-target="#modalInformacion">
+                    <img src="<%=vehiculo.imagenVehiculo%>" width="100px" height="100px">
+                    <h4 ><%=vehiculo.descripcionCorta%></h4>
+                </a>
+            </li>
+            <%})%>
+            
+        </ul>
+    </div>
+</div>
+<div id="modalInformacion" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Informacion Vehiculo </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="get">
+                    <div class="col-sm-6">
+                        <img
+                            id="imagenProducto"
+                            src="/api/imagenes/"
+                            width="300px"
+                            height="300px"
+                            alt=""
+                        >
+                    </div>
+                    <div class="col-sm-6">
+                    <div class="form-group row">
+                        <label class="control-label col-sm-4" for="desCortaId">Descripcio Corta: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="desCortaId" name="descripcionCorta">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-4" for="descLargaId">Descripcion Larga: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="descLargaId" name="descripcionLarga">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-4" for="precioId">Precio: </label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="precioId" name="productoPrecio">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-4" for="placaId">Placa: </label>
+                        <div class="col-sm-8">
+                            <input type="text" plcaholder="AAA1234" class="form-control" id="placaId" name="placa">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-4" for="colorId">Color: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="colorId" name="color">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-4" for="marcaId">Marca: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="marcaId" name="marca">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-4" for="modeloId">Modelo: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="modeloId" name="modelo">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-xs-6">
+                    <form action="">
+                        <input type="number" id="btn_idProducto" name="idProducto" hidden>
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Reservar</button>
+                    </form>
+                </div>
+                <div class="col-xs-6">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script>
+
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>
