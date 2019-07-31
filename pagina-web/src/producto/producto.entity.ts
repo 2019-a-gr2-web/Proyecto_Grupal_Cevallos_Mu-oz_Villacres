@@ -51,6 +51,13 @@ export class ProductoEntity {
     })
     modelo:string;
 
+    @Column({
+        type:'varchar',
+        length:300,
+        name:'imagen_producto'
+    })
+    imagenProducto:string;
+
     @OneToMany(
         type => ProductoPrecioEntity,
         productoPrecio => productoPrecio
